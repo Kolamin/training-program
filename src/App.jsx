@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { colRef } from "./data";
 import { getDocs } from "firebase/firestore";
+import "./styles/styles.css";
 
 function App() {
   const [themes, setThemes] = useState([]);
@@ -14,24 +15,35 @@ function App() {
     getThemes();
   }, []);
 
-  console.log(themes);
-
   return (
-    <div>
-      {themes.map((theme) => {
-        return (
-          <div key={theme.id}>
-            <h2>Вопрос: {theme.question} </h2>
-            <div>
-              {theme.content.map((value) => (
-                <ul key={value}>
+    <div className="question">
+      <div>
+        {themes.map((theme) => {
+          return (
+            <div key={theme.id}>
+              <h2>Тема: {theme.question} </h2>
+              {theme.content.map((value, idx) => (
+                <ul key={idx} className="item">
                   {theme.content.indexOf(value) + 1}. {value}
                 </ul>
               ))}
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
+
+      <div>
+        <h2>Исполнитель</h2>
+        {themes.map((theme) => {
+          return (
+            <div key={theme.id}>
+              {theme.executor.map((value, idx) => (
+                <ul key={idx}>{value}</ul>
+              ))}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

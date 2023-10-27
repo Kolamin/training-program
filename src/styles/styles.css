@@ -1,0 +1,9 @@
+.question {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.item {
+  background: #c1e8e7;
+}
