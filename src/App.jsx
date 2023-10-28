@@ -23,22 +23,9 @@ function App() {
             <div key={theme.id}>
               <h2>Тема: {theme.question} </h2>
               {theme.content.map((value, idx) => (
-                <ul key={idx} className="item">
+                <ul key={idx} data-tooltip={theme.executor[idx]}>
                   {theme.content.indexOf(value) + 1}. {value}
                 </ul>
-              ))}
-            </div>
-          );
-        })}
-      </div>
-
-      <div>
-        <h2>Исполнитель</h2>
-        {themes.map((theme) => {
-          return (
-            <div key={theme.id}>
-              {theme.executor.map((value, idx) => (
-                <ul key={idx}>{value}</ul>
               ))}
             </div>
           );
