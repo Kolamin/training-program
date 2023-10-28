@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { colRef } from "./data";
 import { getDocs } from "firebase/firestore";
 import "./styles/styles.css";
+import Theme from "./components/Theme";
 
 function App() {
   const [themes, setThemes] = useState([]);
@@ -17,20 +18,7 @@ function App() {
 
   return (
     <div className="question">
-      <div>
-        {themes.map((theme) => {
-          return (
-            <div key={theme.id}>
-              <h2>Тема: {theme.question} </h2>
-              {theme.content.map((value, idx) => (
-                <ul key={idx} data-tooltip={theme.executor[idx]}>
-                  {theme.content.indexOf(value) + 1}. {value}
-                </ul>
-              ))}
-            </div>
-          );
-        })}
-      </div>
+      <Theme themes={themes} />
     </div>
   );
 }

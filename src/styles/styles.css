@@ -5,7 +5,7 @@
 }
 
 .item {
-  background-color: #c1e8e7;
+  background-color: #f0f2f5;
 }
 
 [data-tooltip] {
@@ -24,6 +24,7 @@
   pointer-events: none; /* Подсказка */
   opacity: 0; /* Подсказка невидима */
   transition: 1s; /* Время появления подсказки */
+  z-index: 1;
 }
 [data-tooltip]:hover::after {
   opacity: 1; /* Показываем подсказку */
