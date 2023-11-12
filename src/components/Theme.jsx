@@ -4,7 +4,9 @@ const Theme = ({ themes }) => {
       {themes.map((theme) => {
         return (
           <div key={theme.id}>
-            <h2>Тема: {theme.question} </h2>
+            <h2>
+              Тема: {theme.question} / Месяц: {theme.month}
+            </h2>
             {theme.content.map((value, idx) => (
               <ul className="item" key={idx} data-tooltip={theme.executor[idx]}>
                 {theme.content.indexOf(value) + 1}. {value}

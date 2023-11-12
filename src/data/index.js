@@ -14,4 +14,4 @@ initializeApp(firebaseConfig);
 
 const db = getFirestore();
 
-export const colRef = collection(db, "themes");
+export const colAllThemes = collection(db, "themes");
