@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+/* import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -14,4 +14,4 @@ initializeApp(firebaseConfig);
 
 const db = getFirestore();
 
-export const colAllThemes = collection(db, "themes");
+export const colAllThemes = collection(db, "themes"); */

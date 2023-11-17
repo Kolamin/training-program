@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { colAllThemes } from "../data";
+import { colAllThemes } from "../firebase.js";
 import { getDocs, query, where } from "firebase/firestore";
 import "../styles/styles.css";
 import Theme from "./Theme";

@@ -1,7 +1,8 @@
+import RegisterPage from "./pages/RegisterPage";
 import RootLayout from "./layout/RootLayout";
 import { About } from "./pages/About";
 import { Home } from "./pages/Home";
-import { LoginPage } from "./pages/LoginPage";
+import LoginPage from "./pages/LoginPage";
 import ThemesPage from "./pages/ThemesPage";
 import "./styles/styles.css";
 import {
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="themes" element={<ThemesPage />} />
       <Route path="login" element={<LoginPage />} />
+      <Route path="register" element={<RegisterPage />} />
     </Route>
   )
 );
