@@ -1,6 +1,6 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore /* , combineReducers */ } from "@reduxjs/toolkit";
 import userReducer from "./slices/userSlice";
-import {
+/* import {
   persistStore,
   persistReducer,
   FLUSH,
@@ -34,6 +34,12 @@ const store = configureStore({
     }),
 });
 
-export const persistor = persistStore(store);
+export const persistor = persistStore(store); */
+
+const store = configureStore({
+  reducer: {
+    user: userReducer,
+  },
+});
 
 export default store;
