@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { colAllThemes } from "../firebase.js";
 import { getDocs, query, where } from "firebase/firestore";
 import "../styles/styles.css";
@@ -7,6 +7,8 @@ import Theme from "./Theme";
 export const SelectThemes = () => {
   const [themes, setThemes] = useState([]);
   const [month, setMonth] = useState("Все темы");
+
+  useEffect(() => {}, [themes]);
 
   const getThemes = async (month) => {
     if (month === "Все темы") {

@@ -1,6 +1,10 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+} from "firebase/auth";
 import { Form } from "./Form";
 import { setUser } from "../store/slices/userSlice";
 
@@ -23,6 +27,10 @@ const SignUp = () => {
         navigate("/");
       })
       .catch(console.error);
+
+    onAuthStateChanged(auth, (user) => {
+      console.log("user status changed: ", user);
+    });
   };
 
   return <Form title="register" handleClick={handleRegister} />;
