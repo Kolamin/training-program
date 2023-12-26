@@ -11,10 +11,6 @@ export const Home = () => {
   return isAuth ? (
     <div>
       <h1>Темы для тренироки персонала ТГКОМ</h1>
-
-      <button onClick={() => dispatch(removerUser())}>
-        Log out from {email}
-      </button>
     </div>
   ) : (
     <div>

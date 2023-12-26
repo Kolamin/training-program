@@ -33,7 +33,7 @@ const SignUp = () => {
     });
   };
 
-  return <Form title="register" handleClick={handleRegister} />;
+  return <Form title="Регистрация" handleClick={handleRegister} />;
 };
 
 export { SignUp };

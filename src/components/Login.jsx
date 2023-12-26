@@ -35,7 +35,7 @@ const Login = () => {
     });
   };
 
-  return <Form title="sign in" handleClick={handleLogin} />;
+  return <Form title="Войти" handleClick={handleLogin} />;
 };
 
 export { Login };
