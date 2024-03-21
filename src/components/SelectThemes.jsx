@@ -4,11 +4,12 @@ import { getDocs, query, where } from "firebase/firestore";
 import "../styles/styles.css";
 import Theme from "./Theme";
 
+
 export const SelectThemes = () => {
   const [themes, setThemes] = useState([]);
   const [month, setMonth] = useState("Все темы");
 
-  useEffect(() => {}, [themes]);
+  useEffect(() => { }, [themes]);
 
   const getThemes = async (month) => {
     if (month === "Все темы") {
@@ -20,6 +21,8 @@ export const SelectThemes = () => {
       setThemes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     }
   };
+
+  console.log(themes);
 
   return (
     <div>
@@ -39,7 +42,7 @@ export const SelectThemes = () => {
           <option value="Ноябрь">Ноябрь</option>
           <option value="Декабрь">Декабрь</option>
         </select>
-        <button onClick={() => getThemes(month)}>Выбрать тему</button>
+        <button onClick={() => getThemes(month)}>Просмотр темы</button>
       </div>
 
       <div className="question">

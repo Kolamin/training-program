@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom";
 import { SelectThemes } from "../components/SelectThemes";
 import { useAuth } from "../use-hooks/use-auth";
 
+
 const ThemesPage = () => {
   const { isAuth } = useAuth();
   return isAuth ? (
