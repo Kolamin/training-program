@@ -4,6 +4,7 @@ import { About } from "./pages/About";
 import { Home } from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import ThemesPage from "./pages/ThemesPage";
+import TestsPage from "./pages/TestsPage";
 import "./styles/styles.css";
 import {
   createBrowserRouter,
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="themes" element={<ThemesPage />} />
       <Route path="login" element={<LoginPage />} />
       <Route path="register" element={<RegisterPage />} />
+      <Route path="tests" element={<TestsPage />} />
     </Route>
   )
 );

@@ -13,6 +13,7 @@ const RootLayout = () => {
         <nav>
           <NavLink to="/">Главная</NavLink>
           <NavLink to="themes">Темы</NavLink>
+          <NavLink to="tests">Тестирование</NavLink>
           <NavLink to="about">О нас...</NavLink>
           {!isAuth ? (
             <NavLink to="login">Войти</NavLink>
